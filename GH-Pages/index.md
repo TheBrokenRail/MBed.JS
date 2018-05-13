@@ -2,7 +2,7 @@
 
 # Downloads
 
-[MicroBit HEX File](./microbit-js.hex)
+[MicroBit HEX File](./mbed-js.hex)
 
 # Dependencies
 
