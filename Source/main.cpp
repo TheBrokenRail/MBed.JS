@@ -1,5 +1,5 @@
-#include <duktape.h>
 #include "mbed.h"
+#include "duktape/duktape.h"
 #include "JSSource.h"
 
 static duk_ret_t native_print(duk_context *ctx) {
