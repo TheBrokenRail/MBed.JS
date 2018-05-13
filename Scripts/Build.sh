@@ -5,9 +5,10 @@ set -e
 tput setaf 3; tput bold; echo "Generating C++ Source for JS File"
 printf '#include <string>\nchar *jsSource = (char *)R"~~~~('"$(cat Source/main.js)"')~~~~";' > Source/JSSource.h
 
-wget -O duktape.tar.xz http://duktape.org/duktape-2.2.1.tar.xz
+VERSION='2.2.1'
+wget -O duktape.tar.xz http://duktape.org/duktape-$VERSION.tar.xz
 tar xvfJ duktape.tar.xz
-cd duktape
+cd duktape/duktape-$VERSION
 python tools/configure.py --output-directory ../Source --option-file config/examples/low_memory_strip.yaml
 
 tput setaf 3; tput bold; echo "Installing Yotta"
