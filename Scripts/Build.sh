@@ -8,8 +8,9 @@ printf '#include <string>\nchar *jsSource = (char *)R"~~~~('"$(cat Source/main.j
 VERSION='2.2.1'
 wget -O duktape.tar.xz http://duktape.org/duktape-$VERSION.tar.xz
 tar xvfJ duktape.tar.xz
-cd duktape/duktape-$VERSION
+cd duktape-$VERSION
 python tools/configure.py --output-directory ../Source --option-file config/examples/low_memory_strip.yaml
+cd ../
 
 tput setaf 3; tput bold; echo "Installing Yotta"
 pip install --user yotta
