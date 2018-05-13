@@ -1,1 +1,1 @@
-
+printf('JS Rocks!');
